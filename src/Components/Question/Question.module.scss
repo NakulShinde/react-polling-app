@@ -1,0 +1,24 @@
+.question__container {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--background-color-shade-3);
+    border: var(--app-border);
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    &:hover {
+        box-shadow: var(--box-shadow);
+        cursor: pointer;
+    }
+
+    .question__heading {
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--primary-color);
+    }
+    .question__details {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

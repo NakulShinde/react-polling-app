@@ -1,0 +1,44 @@
+.poll__list {
+    border: var(--app-border);
+    display: grid;
+}
+
+.poll__list__container {
+    margin: 10px;
+    display: grid;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .poll__list__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .poll__list__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .poll__list__container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .poll__list__container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .poll__list__container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
