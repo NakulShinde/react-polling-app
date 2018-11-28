@@ -19,7 +19,7 @@ class PollContainer extends Component {
     }
     
     return (
-      <div className={styles.poll__container}>
+      <div>
         <h4>Poll Questions</h4>
         <div className="poll__content">
           <PollList

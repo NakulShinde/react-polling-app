@@ -22,7 +22,7 @@ class QuestionDetailsContainer extends Component {
 		}
 		
         return (
-            <div className={styles.question__details__container}>
+            <div>
                 <h4>Question Details</h4>
                 <div className="questions__details__content">
                     <QuestionDetails questionDetails={this.props.questionDetails}/>

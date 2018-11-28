@@ -17,7 +17,7 @@ class App extends Component {
                     Polling Application
                 </header>
                 <BrowserRouter>
-                    <div>
+                    <div className={styles.app__main__container}>
                         <Route exact path="/" component={PollContainer}/>
                         <Route path="/questions/:questions_id" component={QuestionDetailsContainer}/>
                     </div>
