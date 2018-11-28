@@ -1,4 +1,4 @@
-#Polling App
+# Polling Responsive Web App
 
 Polling web app get polls from https://pollsapi.docs.apiary.io/#, list them all & select poll to opt for.
 
