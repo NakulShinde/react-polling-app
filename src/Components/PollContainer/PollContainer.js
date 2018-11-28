@@ -23,7 +23,6 @@ class PollContainer extends Component {
         <h4>Poll Questions</h4>
         <div className="poll__content">
           <PollList
-            isLoading={this.props.isLoading}
             questionsList={this.props.questionsList}
           />
         </div>
