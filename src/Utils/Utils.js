@@ -12,3 +12,13 @@ export const votePercentage = (vote, totalVotes) => {
         return 'N/A';
     }
 }
+
+export const parseChoiceURL = (choiceURL) => {
+    //hardcoding values to get from url "/questions/10/choices/71"
+    //here questionId = 10 & choiceid = 71
+    let choiceArr = choiceURL.split('/');
+    return {
+        questionId: choiceArr[2],
+        choiceId: choiceArr[4]
+    }
+}

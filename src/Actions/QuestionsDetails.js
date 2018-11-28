@@ -1,4 +1,4 @@
-import { getQuestionDetailsAPI } from "./../Services/APIService";
+import { getQuestionDetailsAPI, voteForSelectedChoice } from "./../Services/APIService";
 
 import { hasErrored, isLoading } from "./CommonActions";
 
@@ -28,3 +28,25 @@ export function fetchQuestionsDetails(questionId) {
             });
     };
 }
+
+export function voteForChoice(questionId, choiceId) {
+    return dispatch => {
+        dispatch(isLoading(true));
+        dispatch(hasErrored(false));
+
+        voteForSelectedChoice(questionId, choiceId)
+            .then(response => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response;
+            })
+            .then(response => response.json())
+            .then(item => dispatch(fetchQuestionsDetails(questionId)))
+            .catch(() => {
+                dispatch(isLoading(false));
+                dispatch(hasErrored(true));
+            });
+    };
+}
+

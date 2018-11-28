@@ -1,10 +1,11 @@
 import React from "react";
 
-import { votePercentage } from "./../../Utils/Utils";
+import { votePercentage, parseChoiceURL } from "./../../Utils/Utils";
 
 import styles from "./Choice.module.scss";
 
 const Choice = props => {
+    const choiceUrlObj = parseChoiceURL(props.choice.url)
     return (
         <div className={styles.question__choice}>
             <div data-label="Choice:" className={styles.question__choice__section}>
@@ -20,7 +21,7 @@ const Choice = props => {
                 {votePercentage(props.choice.votes, props.totalVotes)}%
             </div>
             <div data-label="Action:" className={styles.question__choice__section}>
-                <input name="question_choice_select" type="radio" />
+                <input onChange={() => props.onVoteSelect(choiceUrlObj) }  name="question_choice_select" type="radio" />
             </div>
         </div>
     );
