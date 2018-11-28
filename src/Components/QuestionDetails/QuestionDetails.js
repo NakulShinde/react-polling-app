@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
-import {getQuestionTotalVotes, votePercentage} from './../../Utils/Utils'
+import {getQuestionTotalVotes} from './../../Utils/Utils'
 
 import styles from './QuestionDetails.module.scss'
 import buttonStyles from './../Buttons/Buttons.module.scss';
+import Choice from '../Choice/Choice';
 
 class QuestionDetails extends Component {
 
@@ -23,14 +24,7 @@ class QuestionDetails extends Component {
                     {questionDetails
                         .choices
                         .map((choice, index) => {
-                            return <div key={index} className={styles.question__choice}>
-                                <div data-label='Choice:' className={styles.question__choice__section}>{choice.choice}</div>
-                                <div data-label='Vote:' className={styles.question__choice__section}>{choice.votes}</div>
-                                <div data-label='Percentage:' className={styles.question__choice__section}>{votePercentage(choice.votes, totalVotes)}%</div>
-                                <div data-label='Action:' className={styles.question__choice__section}>
-                                    <input name="question_choice_select" type="radio"></input>
-                                </div>
-                            </div>
+                            return <Choice key={index} choice={choice} totalVotes={totalVotes}></Choice>
                         })}
                     <div className={styles.question__choice__footer}>
                         <Link to={`/`}>
@@ -41,11 +35,9 @@ class QuestionDetails extends Component {
                             </button>
                         </Link>
 
-                        <button
-                                id="vote"
-                                className={buttonStyles.button}>
-                                Vote
-                            </button>
+                        <button id="vote" className={buttonStyles.button}>
+                            Vote
+                        </button>
                     </div>
                 </div>
 
