@@ -26,6 +26,8 @@ code {
     --app-border: 1px solid var(--border-color);
     --status-error-color: #ff4500;
 
+    --button-primary : #007672;
+    --button-primary-over : #038e89;
     --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 
     --background: #eaf0f2;

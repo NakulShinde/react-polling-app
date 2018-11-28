@@ -26,6 +26,14 @@
     }
 }
 
+.question__choice__footer {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        margin: 5px 0;
+    }
+}
 .question__choice__section {
     flex: 1;
     display: flex;

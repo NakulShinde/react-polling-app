@@ -1,0 +1,54 @@
+
+.button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--color-white);
+    margin: 5px;
+    letter-spacing: 1px;
+    line-height: 1;
+    outline: 0;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    font-size: 0.8em;
+    height: 25px;
+    &:hover {
+        background-color: var(--button-primary-over);
+        border-color: var(--button-primary-over);
+    }
+    &.buttonDisabled {
+        opacity: 0.7;
+    }
+    &.buttonDisabled:hover {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        cursor: not-allowed;
+    }
+}
+
+.bigButton {
+    padding: 10px 15px;
+    height: 35px;
+}
+
+.buttonBlueHollow {
+    background-color: var(--color-white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    &:hover {
+        background-color: var(--color-white);
+        color: var(--button-primary-over);
+        border: 1px solid var(--button-primary-over);
+    }
+    &.buttonDisabled:hover {
+        background-color: var(--color-white);
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .button {
+        padding: 3px 7px;
+        margin: 3px;
+    }
+}

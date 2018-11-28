@@ -14,16 +14,17 @@ class QuestionDetailsContainer extends Component {
             .fetchQuestionsDetails(this.questionId);
     }
     render() {
-		if(this.props.isLoading || this.props.hasErrored){
+        if (this.props.isLoading || this.props.hasErrored) {
             return <div className={styles.question__details__container}>
                 {(this.props.isLoading) && <div>Loading...</div>}
                 {(this.props.hasErrored) && <div>Internal Error. Please try again later.</div>}
             </div>
-		}
-		
+        }
+
         return (
             <div>
                 <h4>Question Details</h4>
+                
                 <div className="questions__details__content">
                     <QuestionDetails questionDetails={this.props.questionDetails}/>
                 </div>
@@ -32,11 +33,7 @@ class QuestionDetailsContainer extends Component {
     }
 }
 const mapStateToProps = state => {
-    return {
-		questionDetails: state.questionDetails, 
-		hasErrored: state.hasErrored, 
-		isLoading: state.isLoading
-	};
+    return {questionDetails: state.questionDetails, hasErrored: state.hasErrored, isLoading: state.isLoading};
 };
 
 const matchDispatchToProps = dispatch => {
