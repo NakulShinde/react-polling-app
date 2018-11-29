@@ -13,7 +13,7 @@ Polling web app get polls from https://pollsapi.docs.apiary.io/#, list them all 
 
 # Steps to configure:
 - Clone repo to any directory
-- cd polling-app
+- cd react-polling-app
 - npm install
 - npm start
   - visit http://localhost:3000/ 
