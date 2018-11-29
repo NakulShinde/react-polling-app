@@ -5,7 +5,7 @@ export const getQuestionTotalVotes = (choices) => {
 }
 
 export const votePercentage = (vote, totalVotes) => {
-        return (vote == 0 || totalVotes == 0)? 0 : ((vote/totalVotes)*100).toFixed(2)
+        return (vote === 0 || totalVotes === 0)? 0 : ((vote/totalVotes)*100).toFixed(2)
 }
 
 export const parseChoiceURL = (choiceURL) => {
