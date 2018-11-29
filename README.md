@@ -18,3 +18,8 @@ Polling web app get polls from https://pollsapi.docs.apiary.io/#, list them all 
 - npm start
   - visit http://localhost:3000/ 
 
+# Run unit test
+- npm test
+
+# Run test coverage
+- npm test -- --coverage
