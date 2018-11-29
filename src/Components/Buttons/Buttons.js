@@ -9,10 +9,7 @@ export const CustomButton = (props) => {
         .customClass
         .join(' ')}
         onClick=
-        { (e) =>{ 
-            e.preventDefault();
-            props.onClickHandler()
-            } }>
+        { (e) =>{ e.preventDefault(); props.onClickHandler() } }>
         {props.text}
     </button>
 }
