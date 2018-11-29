@@ -5,12 +5,7 @@ export const getQuestionTotalVotes = (choices) => {
 }
 
 export const votePercentage = (vote, totalVotes) => {
-    try{
         return (vote == 0 || totalVotes == 0)? 0 : ((vote/totalVotes)*100).toFixed(2)
-    }catch(e){
-        console.log(e.message);
-        return 'N/A';
-    }
 }
 
 export const parseChoiceURL = (choiceURL) => {
