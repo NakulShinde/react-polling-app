@@ -26,7 +26,7 @@ it("renders CustomButton snapshot correctly", () => {
     expect(tree).toMatchSnapshot();
 });
 
-it("Choice button onchage called on onClickHandler", () => {
+it("CustomButton onchage called on onClickHandler", () => {
 
     const button = wrapper.find('button');
     expect(button.length).toBe(1);
